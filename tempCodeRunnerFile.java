@@ -1,0 +1,1 @@
+        // staticKeyword obj = new staticKeyword();
