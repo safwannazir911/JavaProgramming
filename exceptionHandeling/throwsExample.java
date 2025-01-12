@@ -1,4 +1,3 @@
-package exceptionHandeling;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -21,7 +20,6 @@ public class throwsExample {
         } catch (IOException e) {
             // Handle the exception
             System.err.println("An IOException was caught: " + e.getMessage());
-            throw e; // Re-throw the exception if necessary
         } finally {
             // Ensure the reader is closed to avoid resource leaks
             if (reader != null) {

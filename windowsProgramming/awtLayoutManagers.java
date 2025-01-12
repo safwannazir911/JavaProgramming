@@ -1,5 +1,3 @@
-package windowsProgramming;
-
 import java.awt.*;
 
 public class awtLayoutManagers {

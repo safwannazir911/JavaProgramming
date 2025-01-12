@@ -1,5 +1,3 @@
-package windowsProgramming;
-
 import java.awt.*;
 import java.awt.event.*;
 

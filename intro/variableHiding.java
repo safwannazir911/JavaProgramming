@@ -4,7 +4,7 @@ public class variableHiding {
     }
 
     static class Child extends Parent {
-        int x = 20;
+        private int x = 20;
 
         void printX() {
             System.out.println(x); // Outputs 20

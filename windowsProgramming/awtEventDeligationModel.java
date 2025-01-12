@@ -1,33 +1,28 @@
-package windowsProgramming;
 
 import java.awt.*;
 import java.awt.event.*;
 
-public class awtEventDeligationModel extends Frame implements ActionListener {
-    Button button;
+public class awtEventDeligationModel {
 
-    awtEventDeligationModel() {
-        super("AWT Example");
-
+    public static void main(String[] args) {
+        Button button;
         button = new Button("Click Me");
         button.setBounds(50, 100, 80, 30);
 
+        Frame frame = new Frame();
         // Register the button with an ActionListener
-        button.addActionListener(this);
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == button) {
+                    System.out.println("Button was clicked!");
+                }
+            }
+        });
 
-        this.add(button);
-        this.setSize(300, 300);
-        this.setLayout(null);
-        this.setVisible(true);
-    }
+        frame.add(button);
+        frame.setSize(300, 300);
+        frame.setLayout(null);
+        frame.setVisible(true);
 
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == button) {
-            System.out.println("Button was clicked!");
-        }
-    }
-
-    public static void main(String[] args) {
-        new awtEventDeligationModel();
     }
 }
